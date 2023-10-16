@@ -10,23 +10,31 @@ const Footer = () => {
             <div className={styles.text}>
                 <div className={styles.rows}>
                     <div className={styles.logo}>
-                        <img src="/images/Footer/logo.png" alt='' />
-                    </div>
-                    {/*<div className={styles.row}>*/}
-                    {/*    <a href="mailto:example@gmail.ru">Contact Us example@gmail.ru</a>*/}
-                    {/*</div>*/}
-                    <div className={styles.row}>
-                        <a href={'#awards'}>Awards</a>
-                        <a href={'#categories'}>Categories</a>
+                        <img src="#" alt='' />
                     </div>
                     <div className={styles.row}>
-                        <a href={'#rules'}>Rules</a>
-                        <a href={'https://filmfreeway.com/bestdirectorawards'}>Submit Now</a>
+                        <a href={'#'}>About Us</a>
+                        <a href={'#'}>Dates</a>
+                        <a href={'#'}>History</a>
+                    </div>
+                    <div className={styles.row}>
+                        <a href={'#'}>Awards</a>
+                        <a href={'#'}>Rules</a>
+                        <a href={'#'}>Core Values</a>
+                    </div>
+                    <div className={styles.row}>
+                    <div className={styles.button}>
+                    <a href={'https://filmfreeway.com'}>
+                        <img src={"/images/FFButtons/red1.png"}/>
+                    </a>
+                </div>
                     </div>
                 </div>
-            </div>
+
+            <div className={styles.line}></div>
             <div className={styles.copyright}>
-                Copyright © 2023 Vancouver Awards
+            Copyright © 2024 Sydney Student International Film Festival
+            </div>
             </div>
         </div>
             </Container>

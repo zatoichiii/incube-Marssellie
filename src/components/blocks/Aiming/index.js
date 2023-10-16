@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from "./Submit.module.scss"
+import styles from "./Aiming.module.scss"
 import Container from "../../UI/Container";
 
-const Submit = () => {
+const Aiming = () => {
     return (
 
         <div className={styles.wrapper}>
@@ -12,8 +12,8 @@ const Submit = () => {
                     We are aiming to watch your project!
                 </div>
                 <div className={styles.button}>
-                    <a href={'https://filmfreeway.com/bestdirectorawards'}>
-                        <img src={"/images/FFButtons/gold.png"}/>
+                    <a href={'https://filmfreeway.com'}>
+                        <img src={"/images/FFButtons/red1.png"}/>
                     </a>
                 </div>
             </div>
@@ -22,4 +22,4 @@ const Submit = () => {
     );
 };
 
-export default Submit;
+export default Aiming;

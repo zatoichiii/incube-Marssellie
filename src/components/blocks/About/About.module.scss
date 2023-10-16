@@ -1,0 +1,58 @@
+.body{
+    background-color: #330D0D;
+
+}
+.wrapper{
+    font-family: 'Inter', sans-serif;
+    padding: 40px 0 20px 0;
+    color: #FFFFFF;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.red{
+    color: #C74444;
+}
+
+
+.text{
+    font-size: 23px;
+    width: 100%;
+    float: left;
+}
+
+.title{
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    gap: 5px;
+    margin-bottom: 20px;
+
+}
+
+
+
+.images{
+    padding: 40px 0 20px 0;
+    width: 60%;
+    position: relative;
+    float: right;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .first{
+    box-shadow: 10px -8px 0px 0px rgb(255, 255, 255);
+  }
+.second{
+    position: absolute;
+    left: 60%;
+    bottom: 5%;
+    box-shadow: 10px -8px 0px 0px rgb(255, 255, 255);
+  }

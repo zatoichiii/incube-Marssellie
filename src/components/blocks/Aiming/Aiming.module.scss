@@ -1,5 +1,5 @@
 .wrapper{
-    background: url("../../../../public/images/Submit/background_cinema.png") no-repeat;
+    background: url("../../../../public/images/Aiming/back.png") no-repeat;
     font-family: 'Inter', sans-serif;
     background-size: cover;
     height: 450px;
@@ -14,7 +14,7 @@
 
 .title{
     text-transform: capitalize;
-    color: #EABB52FF;
+    color: rgb(255, 255, 255);
     font-size: 40px;
     font-weight: 700;
     text-align: center;
@@ -23,8 +23,8 @@
 
 .button{
     margin: 40px auto 0 auto;
-    width: 200px;
-    height: 60px;
+    width: 300px;
+    height: 100px;
     transition: all 0.5s ease-out;
     img{
         width: 100%;
@@ -32,8 +32,8 @@
         border-radius: 16px;
     }
     &:hover{
-        width: 210px;
-        height: 61px;
+        width: 350px;
+        height: 120px;
         margin: 39px auto 0 auto;
     }
 }
