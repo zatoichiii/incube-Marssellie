@@ -1,0 +1,38 @@
+.body{
+    background-color: #FFFFFF;
+
+}
+.wrapper{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0 20px 0;
+}
+
+.text{
+    font-size: 20px;
+}
+
+.title{
+    color: #EABB52FF;
+    font-size: 40px;
+    display: flex;
+    font-weight: 700;
+    gap: 5px;
+    margin-bottom: 40px;
+    text-align: end;
+    padding: 0 0 10px 0;
+    border-bottom: 2px solid #EABB52FF;
+    width: fit-content;
+}
+
+.cup{
+    display: flex;
+    height: 50px;
+    width: 50px;
+    color: #EABB52FF;
+}
+
+.description{
+    margin-bottom: 40px;
+}
