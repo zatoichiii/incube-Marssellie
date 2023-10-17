@@ -78,7 +78,8 @@
 
   }
   @media screen and (max-width: 920px) {
-    width: 100%;
+    width: fit-content;
+    margin: 0 auto;
   }
 }
 
