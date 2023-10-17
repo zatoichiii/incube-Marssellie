@@ -1,6 +1,6 @@
 .wrapper{
     background: url("../../../../public/images/Aiming/back.png") no-repeat;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-size: cover;
     height: 450px;
     display: flex;
@@ -35,5 +35,9 @@
         width: 350px;
         height: 120px;
         margin: 39px auto 0 auto;
+    }
+    @media screen and (max-width: 400px) {
+        width: 80%;
+        height: 75px;
     }
 }

@@ -7,31 +7,34 @@
 }
 
 .inner{
+    background-color: #000000;
     margin: auto;
     justify-content: space-between;
     text-align: center;
     font-size: 23px;
     color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    @media screen and (max-width: 768px) {
+        padding: 40px 0;
+    }
 }
 
 .title{
-    text-transform: capitalize;
     font-size: 50px;
     font-weight: 700;
     text-align: center;
-    padding: 20px;
-}
-
-.red{
-    color: #C74444;
-}
-
-.nom{
     margin-bottom: 20px;
 }
-.winners{
-    color: rgb(163, 153, 153);
-    padding: 20px;
-}
 
+.text{
+    font-size: 20px;
+    color: white;
+    margin: 0 auto 40px auto;
+    width: 75%;
+    b{
+        color: #D04B4B;
+    }
+}
 
