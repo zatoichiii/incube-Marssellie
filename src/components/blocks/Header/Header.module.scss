@@ -40,7 +40,7 @@
   display: flex;
   gap: 15px;
   align-items: center;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     display: none;
   }
 }
@@ -52,7 +52,7 @@
   svg{
     width: 30px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     display: flex;
   }
 }
@@ -68,6 +68,10 @@
   color: white;
   &:hover{
     color: #D04B4B;
+  }
+  @media screen and (max-width: 1200px) {
+    font-size: 16px;
+    padding: 0 4px;
   }
 }
 

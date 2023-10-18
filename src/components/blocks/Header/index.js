@@ -8,25 +8,43 @@ const items = [
     {
         key: '1',
         label: (
-            <a href={"#awards"} className={styles.burgerItem}>Awards</a>
+            <a href={"#awards"} className={styles.burgerItem}>ABOUT US</a>
         ),
     },
     {
         key: '2',
         label: (
-            <a href={"#categories"} className={styles.burgerItem}>Categories</a>
+            <a href={"#categories"} className={styles.burgerItem}>OUR HISTORY</a>
         ),
     },
     {
         key: '3',
         label: (
-            <a href={"#rules"} className={styles.burgerItem}>Rules and Terms</a>
+            <a href={"#rules"} className={styles.burgerItem}>OUR CORE VALUES</a>
         ),
     },
     {
         key: '4',
         label: (
-            <a href={"https://filmfreeway.com/bestdirectorawards"} className={styles.burgerItem}>Submit Now</a>
+            <a href={"#rules"} className={styles.burgerItem}>HOW IT OPERATES</a>
+        ),
+    },
+    {
+        key: '5',
+        label: (
+            <a href={"#rules"} className={styles.burgerItem}>AWARDS</a>
+        ),
+    },
+    {
+        key: '6',
+        label: (
+            <a href={"#rules"} className={styles.burgerItem}>RULES</a>
+        ),
+    },
+    {
+        key: '7',
+        label: (
+            <a href={"https://filmfreeway.com/bestdirectorawards"} className={styles.burgerItem}>SUBMIT NOW</a>
         ),
     },
 ];
