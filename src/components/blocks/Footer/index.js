@@ -10,21 +10,21 @@ const Footer = () => {
             <div className={styles.text}>
                 <div className={styles.rows}>
                     <div className={styles.logo}>
-                        <img src="#" alt='' />
+                        <img src="/images/logo.jpg" alt='' />
                     </div>
                     <div className={styles.row}>
-                        <a href={'#'}>About Us</a>
-                        <a href={'#'}>Dates</a>
-                        <a href={'#'}>History</a>
+                        <a href={'#aboutUS'}>ABOUT US</a>
+                        <a href={'#history'}>OUR HISTORY</a>
+                        <a href={'#values'}>OUR CORE VALUES</a>
                     </div>
                     <div className={styles.row}>
-                        <a href={'#'}>Awards</a>
-                        <a href={'#'}>Rules</a>
-                        <a href={'#'}>Core Values</a>
+                        <a href={'#operates'}>HOW IT OPERATES</a>
+                        <a href={'#awards'}>AWARDS</a>
+                        <a href={'#rules'}>RULES</a>
                     </div>
                     <div className={styles.row}>
                     <div className={styles.button}>
-                    <a href={'https://filmfreeway.com'}>
+                    <a href={'https://filmfreeway.com/Levelupsydney'}>
                         <img src={"/images/FFButtons/red1.png"}/>
                     </a>
                 </div>

@@ -14,6 +14,7 @@
     justify-content: space-between;
     padding: 60px 0;
     font-size: 23px;
+    width: 100%;
     color: rgb(255, 255, 255);
 }
 
@@ -27,6 +28,9 @@
 .description{
     padding: 50px;
     text-align: center;
+    @media screen and (max-width: 456px) {
+        padding: 50px 0;
+    }
 }
 
 .red{
@@ -37,6 +41,9 @@
     margin: 0 auto;
     width: 330px;
     height: 80px;
+    @media screen and (max-width: 456px) {
+        width: 100%;
+    }
 }
 
 .button{
@@ -49,6 +56,10 @@
     &:hover{
         background-color: #923232 !important;
     }
+    span{
+        height: 100%;
+    }
+
 }
 
 .okButton{

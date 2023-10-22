@@ -5,7 +5,7 @@ import Container from "../../UI/Container";
 const CoreValues = () => {
     return (
 
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} id={"values"}>
             <Container>
             <div className={styles.inner}>
                 <div className={styles.title}>

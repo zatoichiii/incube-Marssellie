@@ -5,7 +5,7 @@ import Container from "../../UI/Container";
 const Aiming = () => {
     return (
 
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} id={"awards"}>
             <Container>
             <div className={styles.inner}>
                 <div className={styles.title}>

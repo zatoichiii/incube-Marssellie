@@ -10,7 +10,7 @@ import Container from "../../UI/Container";
 const Overview = () => {
     return (
 
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} id={"history"}>
             <Container>
                 <div className={styles.container}>
                     <div className={styles.slider}>

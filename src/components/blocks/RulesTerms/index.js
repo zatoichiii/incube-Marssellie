@@ -6,19 +6,19 @@ import Container from "../../UI/Container";
 const RulesTerms = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} id={"rules"}>
             <Container>
             <div className={styles.inner}>
                 <div className={styles.title}>
-                <span className={styles.red}>Rules</span> And  <span className={styles.red}>Terms</span>
+                <span className={styles.red}>Rules</span> And <span className={styles.red}>Terms</span>
                 </div>
                 <div className={styles.description}>
-                All entries submitted to “Level Up” - Sydney Student International Film Festival must adhere to the following guidelines. By submitting a film for consideration, the entrant/submitter/ moviemaker/controlling company agrees to abide by these rules and terms.
+                    All entries submitted to “Level Up” - Sydney Student International Film Festival must adhere to the following guidelines. By submitting a film for consideration, the entrant / submitter / moviemaker / controlling company agrees to abide by these rules and terms.
                 </div>
             
             <div className={styles.buttonBlock}>
                     <Button className={styles.button} type="primary" onClick={()=>setIsModalOpen(!isModalOpen)}>
-                        Show Rules and Terms
+                        Show Rules
                     </Button>
                 </div>
                 <Modal

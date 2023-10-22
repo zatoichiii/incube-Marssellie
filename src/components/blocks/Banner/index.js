@@ -15,7 +15,7 @@ const Banner = () => {
                         <div className={styles.subTitle}>
                             April 19th and 20th, 2024 as the "Level Up" festival unveils the finest creations by emerging talents in the world of cinema.
                         </div>
-                        <a href={'https://filmfreeway.com/bestdirectorawards'} className={styles.button}>
+                        <a href={'https://filmfreeway.com/Levelupsydney'} className={styles.button}>
                             <img src={"/images/FFButtons/red1.png"}/>
                         </a>
                     </div>

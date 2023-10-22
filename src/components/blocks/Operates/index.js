@@ -9,7 +9,7 @@ import Container from "../../UI/Container";
 const Operates = () => {
     return (
 
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} id={"operates"}>
             <Container>
                 <div className={styles.container}>
                    <div className={styles.title}>
@@ -56,11 +56,8 @@ const Operates = () => {
                                 "Level Up" aims to be more than just a local event. We want our student filmmakers to gain international exposure and recognition. Winning films and outstanding entries may have the opportunity to be showcased at other prestigious festivals around the world, broadening the reach and impact of their work.
                             </div>
                         </div>
-                        {/*<a href={'https://filmfreeway.com/bestdirectorawards'} className={styles.button}>*/}
-                        {/*    <img src={"/images/FFButtons/red1.png"}/>*/}
-                        {/*</a>*/}
                         <div className={styles.item}>
-                            <a href={'https://filmfreeway.com/bestdirectorawards'} className={styles.button}>
+                            <a href={'https://filmfreeway.com/Levelupsydney'} className={styles.button}>
                                 <img src={"/images/FFButtons/red1.png"}/>
                             </a>
                         </div>

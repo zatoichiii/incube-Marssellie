@@ -8,31 +8,31 @@ const items = [
     {
         key: '1',
         label: (
-            <a href={"#awards"} className={styles.burgerItem}>ABOUT US</a>
+            <a href={"#aboutUS"} className={styles.burgerItem}>ABOUT US</a>
         ),
     },
     {
         key: '2',
         label: (
-            <a href={"#categories"} className={styles.burgerItem}>OUR HISTORY</a>
+            <a href={"#history"} className={styles.burgerItem}>OUR HISTORY</a>
         ),
     },
     {
         key: '3',
         label: (
-            <a href={"#rules"} className={styles.burgerItem}>OUR CORE VALUES</a>
+            <a href={"#values"} className={styles.burgerItem}>OUR CORE VALUES</a>
         ),
     },
     {
         key: '4',
         label: (
-            <a href={"#rules"} className={styles.burgerItem}>HOW IT OPERATES</a>
+            <a href={"#operates"} className={styles.burgerItem}>HOW IT OPERATES</a>
         ),
     },
     {
         key: '5',
         label: (
-            <a href={"#rules"} className={styles.burgerItem}>AWARDS</a>
+            <a href={"#awards"} className={styles.burgerItem}>AWARDS</a>
         ),
     },
     {
@@ -44,7 +44,7 @@ const items = [
     {
         key: '7',
         label: (
-            <a href={"https://filmfreeway.com/bestdirectorawards"} className={styles.burgerItem}>SUBMIT NOW</a>
+            <a href={"https://filmfreeway.com/Levelupsydney"} className={styles.burgerItem}>SUBMIT NOW</a>
         ),
     },
 ];
@@ -73,16 +73,16 @@ const Index = () => {
             <Container>
             <div className={styles.inner}>
                 <a href={"/"} className={styles.logo}>
-                    <img src={"/images/logo.png"}/>
+                    <img src={"/images/logo.jpg"}/>
                 </a>
                 <div className={styles.headerItems}>
-                    <a href={"#awards"} className={styles.headerItem}>ABOUT US</a>
-                    <a href={"#categories"} className={styles.headerItem}>OUR HISTORY</a>
-                    <a href={"#rules"} className={styles.headerItem}>OUR CORE VALUES</a>
-                    <a href={"#rules"} className={styles.headerItem}>HOW IT OPERATES</a>
-                    <a href={"#rules"} className={styles.headerItem}>AWARDS</a>
+                    <a href={"#aboutUS"} className={styles.headerItem}>ABOUT US</a>
+                    <a href={"#history"} className={styles.headerItem}>OUR HISTORY</a>
+                    <a href={"#values"} className={styles.headerItem}>OUR CORE VALUES</a>
+                    <a href={"#operates"} className={styles.headerItem}>HOW IT OPERATES</a>
+                    <a href={"#awards"} className={styles.headerItem}>AWARDS</a>
                     <a href={"#rules"} className={styles.headerItem}>RULES</a>
-                    <a href={"https://filmfreeway.com/bestdirectorawards"} className={styles.headerItem}>SUBMIT NOW</a>
+                    <a href={"https://filmfreeway.com/Levelupsydney"} className={styles.headerItem}>SUBMIT NOW</a>
                 </div>
                 <div className={styles.burger}>
                     <Dropdown

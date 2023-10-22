@@ -12,7 +12,7 @@ const Aiming = () => {
                     We are aiming to watch your project!
                 </div>
                 <div className={styles.button}>
-                    <a href={'https://filmfreeway.com'}>
+                    <a href={'https://filmfreeway.com/Levelupsydney'}>
                         <img src={"/images/FFButtons/red1.png"}/>
                     </a>
                 </div>
