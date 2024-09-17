@@ -1,63 +1,111 @@
-.headerWrapper{
+.headerWrapper {
   font-family: 'Montserrat', sans-serif;
   height: 80px;
   display: flex;
   position: fixed;
   z-index: 999;
   width: 100%;
+  transition: all 0.3s;
+  background-color: transparent;
 }
 
-.scrolled{
-  background-color: #141414;
+.scrolled {
+  background-color: #151b28;
 }
 
-.inner{
+.inner {
   display: flex;
   justify-content: space-between;
   width: 100%;
   gap: 10px;
+  align-items: center;
 }
 
-.logo{
+.logo {
   display: flex;
   gap: 10px;
   align-items: center;
-  img{
+  img {
     width: 65px;
     height: 65px;
   }
 }
 
-.logoName{
-  border-left: 2px solid #fff;
-  padding: 0 0 0 10px;
-  font-size: 18px;
-  color: #fff;
-  font-weight: 500;
-}
-
-.headerItems{
+.headerItems {
   display: flex;
   gap: 15px;
+  transition: 0,3s;
   align-items: center;
   @media screen and (max-width: 992px) {
     display: none;
   }
 }
 
-.burger{
-  display: none;
+.menuButton {
+  display: flex;
   align-items: center;
-  min-width: 30px;
-  svg{
-    width: 30px;
-  }
-  @media screen and (max-width: 992px) {
-    display: flex;
+  justify-content: center;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  position: relative;
+  z-index: 1001; /* чтобы кнопка оставалась на виду */
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  @media screen and (min-width: 993px) {
+    display: none;
   }
 }
 
-.headerItem{
+.menuIcon {
+  position: relative;
+  width: 34px;
+  height: 3px;
+  left: 15px;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.menuButton.active .menuIcon {
+  background-color: transparent; /* Скрыть центральную палочку */
+}
+
+.menuIcon::before,
+.menuIcon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.menuIcon::before {
+  top: -8px;
+  right:0.5px;
+}
+
+.menuIcon::after {
+  bottom: -8px;
+  right: 0.5px;
+}
+
+.menuButton.active .menuIcon::before {
+  opacity: 0;
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menuButton.active .menuIcon::after {
+  transform: rotate(-45deg);
+  opacity: 0;
+  bottom: 0;
+}
+
+.headerItem {
   font-weight: 500;
   font-size: 18px;
   cursor: pointer;
@@ -66,15 +114,12 @@
   align-items: center;
   display: flex;
   color: white;
-  &:hover{
-    color: #D04B4B;
+  transition: 0.3s;
+  &:hover {
+    color: #fc8252;
   }
   @media screen and (max-width: 1200px) {
     font-size: 16px;
     padding: 0 4px;
   }
-}
-
-.burgerItem{
-  font-size: 16px;
 }

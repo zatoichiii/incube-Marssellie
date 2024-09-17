@@ -1,5 +1,5 @@
 .body{
-  background-color: #141414;
+  background-color: #151b28;
 
 }
 
@@ -26,8 +26,8 @@
     height: 100%;
   }
   @media screen and (max-width: 768px) {
-    margin-bottom: 40px;
-    width: 200px;
+    margin-bottom: 20px;
+    width: 100px;
   }
 }
 
@@ -54,6 +54,7 @@
 
 a {
     color: #ffffff;
+  cursor: pointer;
     text-decoration: none;
   }
 
@@ -67,9 +68,7 @@ a {
         border-radius: 16px;
     }
     &:hover{
-        width: 240px;
-        height: 80px;
-        margin: 0px auto 0 auto;
+      transform: scale(1.1);
     }
 }
 

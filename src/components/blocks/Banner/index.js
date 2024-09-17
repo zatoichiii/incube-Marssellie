@@ -2,21 +2,22 @@ import React from 'react';
 import styles from "./Banner.module.scss"
 import Container from "../../UI/Container";
 
+
 const Banner = () => {
     return (
-
         <div className={styles.wrapper}>
             <Container>
                 <div className={styles.inner}>
                     <div className={styles.info}>
                         <div className={styles.title}>
-                            <b>Level Up</b> - Sydney Student International Film Festival
+                            <b> HONG KONG LIGHTS - International Film Festival</b>
                         </div>
                         <div className={styles.subTitle}>
-                            April 19th and 20th, 2024 as the "Level Up" festival unveils the finest creations by emerging talents in the world of cinema.
+                        February 25, 2025
+
                         </div>
-                        <a href={'https://filmfreeway.com/Levelupsydney'} className={styles.button}>
-                            <img src={"/images/FFButtons/red1.png"}/>
+                        <a href={'https://filmfreeway.com/hongkonglightsfestival'} className={styles.button}>
+                            <img src={"/images/FFButtons/red1.png"} alt="FilmFreeway Button"/>
                         </a>
                     </div>
                 </div>

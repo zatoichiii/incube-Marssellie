@@ -1,56 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import styles from "./Header.module.scss"
-import {Dropdown} from "antd";
+import React, { useEffect, useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import styles from "./Header.module.scss";
 import Container from "../../UI/Container";
-import {UnorderedListOutlined} from "@ant-design/icons";
+import Menu from "../../UI/Menu";
 
-const items = [
-    {
-        key: '1',
-        label: (
-            <a href={"#aboutUS"} className={styles.burgerItem}>ABOUT US</a>
-        ),
-    },
-    {
-        key: '2',
-        label: (
-            <a href={"#history"} className={styles.burgerItem}>OUR HISTORY</a>
-        ),
-    },
-    {
-        key: '3',
-        label: (
-            <a href={"#values"} className={styles.burgerItem}>OUR CORE VALUES</a>
-        ),
-    },
-    {
-        key: '4',
-        label: (
-            <a href={"#operates"} className={styles.burgerItem}>HOW IT OPERATES</a>
-        ),
-    },
-    {
-        key: '5',
-        label: (
-            <a href={"#awards"} className={styles.burgerItem}>AWARDS</a>
-        ),
-    },
-    {
-        key: '6',
-        label: (
-            <a href={"#rules"} className={styles.burgerItem}>RULES</a>
-        ),
-    },
-    {
-        key: '7',
-        label: (
-            <a href={"https://filmfreeway.com/Levelupsydney"} className={styles.burgerItem}>SUBMIT NOW</a>
-        ),
-    },
-];
-
-const Index = () => {
+const Header = () => {
     const [scrolled, setScrolled] = useState(false);
+    const [menuActive, setMenuActive] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -67,39 +23,52 @@ const Index = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    const menuItems = [
+        { value: "ABOUT US", href: "about" },
+        { value: "MISSION", href: "mission" },
+        { value: "ABILITY", href: "ability" },
+        { value: "CITY", href: "city" },
+        { value: "CATEGORIES", href: "categories" },
+        { value: "RULES", href: "rules" },
+        { value: "SUBMIT NOW", href: "https://filmfreeway.com/hongkonglightsfestival", external: true }
+    ];
+
     return (
-
-        <div className={`${styles.headerWrapper} ${scrolled ? styles.scrolled : ""}`} >
+        <div className={`${styles.headerWrapper} ${scrolled ? styles.scrolled : ""}`}>
             <Container>
-            <div className={styles.inner}>
-                <a href={"/"} className={styles.logo}>
-                    <img src={"/images/logo.jpg"}/>
-                </a>
-                <div className={styles.headerItems}>
-                    <a href={"#aboutUS"} className={styles.headerItem}>ABOUT US</a>
-                    <a href={"#history"} className={styles.headerItem}>OUR HISTORY</a>
-                    <a href={"#values"} className={styles.headerItem}>OUR CORE VALUES</a>
-                    <a href={"#operates"} className={styles.headerItem}>HOW IT OPERATES</a>
-                    <a href={"#awards"} className={styles.headerItem}>AWARDS</a>
-                    <a href={"#rules"} className={styles.headerItem}>RULES</a>
-                    <a href={"https://filmfreeway.com/Levelupsydney"} className={styles.headerItem}>SUBMIT NOW</a>
+                <div className={styles.inner}>
+                    <a href={"/"} className={styles.logo}>
+                        <img src={"/images/logo.jpg"} alt="Logo"/>
+                    </a>
+                    <div className={styles.headerItems}>
+                        {menuItems.map(item => (
+                            item.external ? (
+                                <a href={item.href} className={styles.headerItem} key={item.value} target="_blank" rel="noopener noreferrer">
+                                    {item.value}
+                                </a>
+                            ) : (
+                                <ScrollLink 
+                                    to={item.href} 
+                                    className={styles.headerItem} 
+                                    key={item.value} 
+                                    smooth={true} 
+                                    duration={500} 
+                                    offset={-50}
+                                >
+                                    {item.value}
+                                </ScrollLink>
+                            )
+                        ))}
+                    </div>
+                    <button onClick={() => setMenuActive(!menuActive)} className={`${styles.menuButton} ${menuActive ? styles.active : ""}`}>
+                        <div className={styles.menuIcon} />
+                    </button>
                 </div>
-                <div className={styles.burger}>
-                    <Dropdown
-                        menu={{
-                            items,
-                        }}
-                        placement="bottomRight"
-                    >
-                        <UnorderedListOutlined style={{color: "#FFF"}} />
-                    </Dropdown>
-                </div>
-            </div>
             </Container>
-
-
+            <Menu header="Menu" items={menuItems} active={menuActive} setActive={setMenuActive} />
         </div>
     );
 };
 
-export default Index;
+export default Header;

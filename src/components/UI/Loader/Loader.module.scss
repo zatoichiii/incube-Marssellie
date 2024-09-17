@@ -1,0 +1,27 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #151b28; /* цвет заднего фона */
+  z-index: 9999; /* высокий z-index для отображения поверх всего */
+}
+
+.loader > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+}
+
+.spinner > svg > circle {
+  stroke: #ffffff; /* цвет кружочка загрузки */
+}

@@ -1,0 +1,15 @@
+.showWrapper {
+    overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+.ShowStyleOff {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.ShowStyleOn {
+    width: 100%;
+    opacity: 1;
+    transition: all 1s;
+    transform: translateX(0%);
+}

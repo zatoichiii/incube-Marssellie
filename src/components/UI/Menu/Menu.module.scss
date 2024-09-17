@@ -1,0 +1,58 @@
+// Menu.module.scss
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #151b28;
+    z-index: 1000;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto; /* Добавляем прокрутку, если содержимое меню слишком большое */
+    
+    &.active {
+      transform: translateY(0%);
+    }
+  
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      color: white;
+      border-bottom: 1px solid #ccc;
+      background-color: #1b2233;;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  
+    .closeButton {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: #ffffff;
+    }
+  
+    .items {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0px;
+      gap: 10px; /* Отступ между элементами меню */
+    }
+  
+    .item {
+      font-size: 16px;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px;
+      cursor: pointer;
+  
+      &:hover {
+        color: #d04b4b;
+      }
+    }
+  }
+  

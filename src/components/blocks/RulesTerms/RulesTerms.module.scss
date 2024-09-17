@@ -1,5 +1,5 @@
 .wrapper{
-    background: #141414;
+    background-color: #151b28;
     font-family: 'Montserrat', sans-serif;
     background-size: cover;
     display: flex;
@@ -34,7 +34,7 @@
 }
 
 .red{
-    color: #C74444;
+    color: #fc8252;
 }
 
 .buttonBlock{
@@ -52,9 +52,9 @@
     height: 100%;
     font-size: 30px;
     padding: 10px 15px;
-    background-color: #C74444;
+    background-color: #fc8252;
     &:hover{
-        background-color: #923232 !important;
+        background-color: #cc6941 !important;
     }
     span{
         height: 100%;
@@ -67,7 +67,7 @@
     background-color: #C74444;
     &:hover{
         color: #FFFFFF!important;
-        border-color: #923232 !important;
-        background-color: #923232 !important;
+        border-color: #fc8252 !important;
+        background-color: #fc8252 !important;
     }
 }

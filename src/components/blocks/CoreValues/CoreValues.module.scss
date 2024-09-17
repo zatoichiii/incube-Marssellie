@@ -1,13 +1,13 @@
 .wrapper{
-    background-color: #330D0D;
     font-family: 'Montserrat', sans-serif;
     background-size: cover;
     display: flex;
     padding: 60px 0;
+    background-color: #151b28;
 }
 
 .inner{
-    background-color: #000000;
+    background-color: rgb(15, 19, 28);
     margin: auto;
     justify-content: space-between;
     text-align: center;
@@ -34,7 +34,7 @@
     margin: 0 auto 40px auto;
     width: 75%;
     b{
-        color: #D04B4B;
+        color: #fc8252;
     }
 }
 

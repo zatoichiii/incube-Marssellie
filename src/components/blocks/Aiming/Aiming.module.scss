@@ -1,12 +1,30 @@
-.wrapper{
-    background: url("../../../../public/images/Aiming/back.png") no-repeat;
+.wrapper {
+    position: relative;
+    background: url("../../../../public/images/banner/i.webp") no-repeat;
     font-family: 'Montserrat', sans-serif;
     background-size: cover;
-    height: 450px;
+    height: 70vh;
     display: flex;
-}
+    width: 100%;
+    @media screen and (max-width: 860px) {
+      height: auto;
+    }
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); /* затемнение */
+      z-index: 1;
+    }
+  }
+  
 
 .inner{
+    z-index: 20;
     margin: auto;
     justify-content: space-between;
     padding: 100px 0;
@@ -18,26 +36,27 @@
     font-size: 40px;
     font-weight: 700;
     text-align: center;
+    b{
+        color: #fc8252;
+    }
 }
 
 
-.button{
-    margin: 40px auto 0 auto;
-    width: 300px;
-    height: 100px;
-    transition: all 0.5s ease-out;
-    img{
-        width: 100%;
-        height: 100%;
-        border-radius: 16px;
-    }
-    &:hover{
-        width: 350px;
-        height: 120px;
-        margin: 39px auto 0 auto;
-    }
-    @media screen and (max-width: 400px) {
-        width: 80%;
-        height: 75px;
-    }
+.contact{
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    margin-top: 20px;
+    @media screen and (max-width: 640px) {
+        font-size: 24px;
+        padding: 10px;
+      }
+      @media screen and (max-width: 540px) {
+        font-size: 20px;
+        padding: 10px;
+      }
+      @media screen and (max-width: 450px) {
+        font-size: 16px;
+      }
 }

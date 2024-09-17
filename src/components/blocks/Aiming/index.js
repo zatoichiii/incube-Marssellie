@@ -9,12 +9,10 @@ const Aiming = () => {
             <Container>
             <div className={styles.inner}>
                 <div className={styles.title}>
-                    We are aiming to watch your project!
+                    Contact <b>Us</b>!
                 </div>
-                <div className={styles.button}>
-                    <a href={'https://filmfreeway.com/Levelupsydney'}>
-                        <img src={"/images/FFButtons/red1.png"}/>
-                    </a>
+                <div className={styles.contact}>
+                hongkonglightsfestival@gmail.com
                 </div>
             </div>
             </Container>

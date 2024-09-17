@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./Overview.module.scss"
-
 import Container from "../../UI/Container";
+import Show from '../../UI/Show';
 
 
 
@@ -10,22 +10,24 @@ import Container from "../../UI/Container";
 const Overview = () => {
     return (
 
-        <div className={styles.wrapper} id={"history"}>
+        <div className={styles.wrapper} id={"mission"}>
             <Container>
+            <Show initialX={100}>
                 <div className={styles.container}>
                     <div className={styles.slider}>
                         <img src={"/images/ourHistory/camera.png"}/>
                     </div>
                     <div className={styles.text}>
                         <div className={styles.title}>
-                            Our <b>History</b>
+                            Our <b>Mission</b>
                         </div>
                         <div className={styles.description}>
-                            While <b>"Level Up"</b> is embarking on its inaugural year in 2024, we are already brimming with excitement about the creative ingenuity and fresh perspectives our participants will bring to the forefront. Our festival aspires to emerge as a pivotal event in the global cinematic landscape, introducing you to the future luminaries of this dynamic industry.
+                        Our mission is <b>clear:</b>  to provide a platform where filmmakers from minority groups and diverse cultures can present their unique stories. We believe in the transformative power of film to challenge perceptions and inspire a more inclusive future. By bringing together an eclectic mix of voices, we aim to spark conversations that matter and to reflect the rich tapestry of human experience.
                         </div>
                     </div>
 
                 </div>
+                </Show>
             </Container>
         </div>
     );

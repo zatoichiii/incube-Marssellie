@@ -1,29 +1,28 @@
 import React from 'react';
 import styles from "./About.module.scss"
 import Container from "../../UI/Container";
+import Show from "../../UI/Show";
 
 const About = () => {
     return (
-        <div className={styles.body} id={"aboutUS"}>
+        <div className={styles.body} id={"about"}>
             <Container>
+                <Show>
                 <div className={styles.bodyWrapper}>
-
-
                     <div className={styles.wrapper}>
                         <div className={styles.text}>
                             <div className={styles.title}>
-                                About <span className={styles.red}>Us</span>
+                                About <span className={styles.blue}>Us</span>
                             </div>
                                 <div className={styles.description}>
-                                Welcome to the official website of the "<span className={styles.red}>Level Up - Sydney student International Film Festival </span>"! This highly-anticipated, groundbreaking festival is set to make its debut in 2024. Our mission is to recognize and champion the exceptional talents of student filmmakers not only from Australia but also from around the world.
+                                Located in the heart of <span className={styles.blue}> Hong Kong </span>, the festival is a beacon for independent filmmakers and cinephiles around the world.  Our festival is not just an event, but a movement to champion diverse voices and promote social change through the art of cinema.
                                 </div>
                         </div>
                     </div>
-                    <div className={styles.images}>
-                        <img  className={styles.first} src={"/images/About/1.png"}/>
-                        <img className={styles.second} src={"/images/About/2.png"}/>
-                    </div>
+                        <img  className={styles.first} src={"/images/About/about.png"}/>
+
                 </div>
+                </Show>
             </Container>
         </div>
     );
