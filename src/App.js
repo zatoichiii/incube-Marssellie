@@ -48,7 +48,6 @@ function App() {
           <Operates />
           <AwardsnCat />
           <RulesTerms />
-          <Aiming />
           <Footer />
         </>
       )}
