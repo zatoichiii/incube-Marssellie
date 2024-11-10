@@ -1,16 +1,16 @@
 .wrapper {
-    position: relative;
-    background: url("../../../../public/images/banner/i.webp") no-repeat;
-    font-family: 'Montserrat', sans-serif;
-    background-size: cover;
-    height: 70vh;
-    display: flex;
-    width: 100%;
-    @media screen and (max-width: 860px) {
+  position: relative;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  height: 70vh;
+  display: flex;
+  width: 100%;
+  overflow: hidden; 
+
+  @media screen and (max-width: 860px) {
       height: auto;
-    }
-  
-    &::before {
+  }
+
+  &::before {
       content: '';
       position: absolute;
       top: 0;
@@ -19,44 +19,54 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.7); /* затемнение */
       z-index: 1;
-    }
   }
-  
-
-.inner{
-    z-index: 20;
-    margin: auto;
-    justify-content: space-between;
-    padding: 100px 0;
 }
 
-.title{
-    text-transform: capitalize;
-    color: rgb(255, 255, 255);
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    b{
-        color: #fc8252;
-    }
+.backgroundVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
 }
 
+.inner {
+  z-index: 20;
+  margin: auto;
+  justify-content: space-between;
+  padding: 100px 0;
+}
 
-.contact{
-    border: 2px solid rgb(255, 255, 255);
-    color: white;
-    font-size: 30px;
-    padding: 20px;
-    margin-top: 20px;
-    @media screen and (max-width: 640px) {
-        font-size: 24px;
-        padding: 10px;
-      }
-      @media screen and (max-width: 540px) {
-        font-size: 20px;
-        padding: 10px;
-      }
-      @media screen and (max-width: 450px) {
-        font-size: 16px;
-      }
+.title {
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  b {
+      color: white;
+  }
+}
+
+.contact {
+  border: 2px solid rgb(255, 255, 255);
+  color: white;
+  font-size: 30px;
+  padding: 20px;
+  margin-top: 20px;
+  @media screen and (max-width: 640px) {
+      font-size: 24px;
+      padding: 10px;
+  }
+  @media screen and (max-width: 540px) {
+      font-size: 20px;
+      padding: 10px;
+  }
+  @media screen and (max-width: 450px) {
+      font-size: 16px;
+  }
 }

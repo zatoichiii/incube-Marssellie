@@ -44,10 +44,10 @@ function App() {
           <About />
           <Gallery />
           <Overview />
-          <CoreValues />
-          <Operates />
           <AwardsnCat />
           <RulesTerms />
+          <Operates/>
+          <Aiming/>
           <Footer />
         </>
       )}

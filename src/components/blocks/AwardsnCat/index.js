@@ -1,35 +1,43 @@
 import React from 'react';
-import styles from "./AwardsnCat.module.scss"
+import styles from "./AwardsnCat.module.scss";
 import Container from "../../UI/Container";
 import Show from '../../UI/Show';
 
 const Aiming = () => {
+    const awards = [
+        "Best Music Video",
+        "Best Short Film",
+        "Best Feature Film",
+        "Best Animated Film",
+        "Best Documentary",
+        "Best Student Film",
+        "Best Experimental Film",
+        "Best Short Screenplay",
+        "Best Feature Screenplay",
+    ];
+
+    const getRandomWidth = () => {
+        const min = 130; 
+        const max = 600; 
+        return Math.floor(Math.random() * (max - min + 1)) + min; 
+    };
+
     return (
-
         <div className={styles.wrapper} id={"categories"}>
-
             <Container>
-            <div className={styles.inner}>
-            <Show initialX={-100}>
-
-                <div className={styles.title}>
-                   <span className={styles.red}>Awrds</span>  And <span className={styles.red}>Categories</span>  
+                <div className={styles.inner}>
+                    <h2 className={styles.title}>Main Awards</h2>
+                    {awards.map((award, index) => (
+                        <div 
+                            key={index} 
+                            className={styles.awardBlock} 
+                            style={{ width: `${getRandomWidth()}px`, maxWidth: '300px' }} // Устанавливаем maxWidth
+                        >
+                            {award}
+                        </div>
+                    ))}
                 </div>
-                
-                <div className={styles.nom}>The Certificate Awards are given in the following categories:</div>
-                <div className={styles.text}>
-                • Best Feature Film <br></br>
-                • Best Short Film <br></br>
-                • Best Documentary <br></br>
-                • Best Cinematography <br></br>
-                • Best Screenplay <br></br>
-                • Best Animation <br></br>
-                </div>
-            </Show>
-                
-            </div>
             </Container>
-
         </div>
     );
 };

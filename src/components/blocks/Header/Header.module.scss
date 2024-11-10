@@ -1,5 +1,5 @@
 .headerWrapper {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   height: 80px;
   display: flex;
   position: fixed;
@@ -10,7 +10,8 @@
 }
 
 .scrolled {
-  background-color: #151b28;
+  background: rgba(0, 0, 0, 0.4); 
+  
 }
 
 .inner {
@@ -51,7 +52,7 @@
   cursor: pointer;
   color: white;
   position: relative;
-  z-index: 1001; /* чтобы кнопка оставалась на виду */
+  z-index: 1001; 
   width: 30px;
   height: 30px;
   padding: 0;
@@ -116,10 +117,15 @@
   color: white;
   transition: 0.3s;
   &:hover {
-    color: #fc8252;
+    color: #cacaca;
   }
   @media screen and (max-width: 1200px) {
     font-size: 16px;
     padding: 0 4px;
   }
+}
+
+.separator{
+  color: white;
+  font-size: 20px;
 }

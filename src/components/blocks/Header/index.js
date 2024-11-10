@@ -25,13 +25,12 @@ const Header = () => {
     }, []);
 
     const menuItems = [
-        { value: "ABOUT US", href: "about" },
-        { value: "MISSION", href: "mission" },
-        { value: "ABILITY", href: "ability" },
-        { value: "CITY", href: "city" },
-        { value: "CATEGORIES", href: "categories" },
-        { value: "RULES", href: "rules" },
-        { value: "SUBMIT NOW", href: "https://filmfreeway.com/hongkonglightsfestival", external: true }
+        { value: "About Us", href: "about" },
+        { value: "Mission", href: "mission" },
+        { value: "City", href: "city" },
+        { value: "Categories", href: "categories" },
+        { value: "Rules", href: "rules" },
+        { value: "Submit", href: "https://filmfreeway.com/marseillefestivalIncube", external: true }
     ];
 
     return (
@@ -39,26 +38,29 @@ const Header = () => {
             <Container>
                 <div className={styles.inner}>
                     <a href={"/"} className={styles.logo}>
-                        <img src={"/images/logo.jpg"} alt="Logo"/>
+                        {/* <img src={"/images/.jpg"} alt="Incube"/> */}
+                        Incube
                     </a>
                     <div className={styles.headerItems}>
-                        {menuItems.map(item => (
-                            item.external ? (
-                                <a href={item.href} className={styles.headerItem} key={item.value} target="_blank" rel="noopener noreferrer">
-                                    {item.value}
-                                </a>
-                            ) : (
-                                <ScrollLink 
-                                    to={item.href} 
-                                    className={styles.headerItem} 
-                                    key={item.value} 
-                                    smooth={true} 
-                                    duration={500} 
-                                    offset={-50}
-                                >
-                                    {item.value}
-                                </ScrollLink>
-                            )
+                        {menuItems.map((item, index) => (
+                            <React.Fragment key={item.value}>
+                                {item.external ? (
+                                    <a href={item.href} className={styles.headerItem} target="_blank" rel="noopener noreferrer">
+                                        {item.value}
+                                    </a>
+                                ) : (
+                                    <ScrollLink 
+                                        to={item.href} 
+                                        className={styles.headerItem} 
+                                        smooth={true} 
+                                        duration={500} 
+                                        offset={-50}
+                                    >
+                                        {item.value}
+                                    </ScrollLink>
+                                )}
+                                {index < menuItems.length - 1 && <span className={styles.separator}> | </span>}
+                            </React.Fragment>
                         ))}
                     </div>
                     <button onClick={() => setMenuActive(!menuActive)} className={`${styles.menuButton} ${menuActive ? styles.active : ""}`}>
@@ -66,7 +68,7 @@ const Header = () => {
                     </button>
                 </div>
             </Container>
-            <Menu header="Menu" items={menuItems} active={menuActive} setActive={setMenuActive} />
+            <Menu header=" Incube de Marseille Film Festival" items={menuItems} active={menuActive} setActive={setMenuActive} />
         </div>
     );
 };
