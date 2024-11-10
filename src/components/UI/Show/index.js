@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from "./Show.module.scss";
 
-const Show = ({ children, initialX = -100, initialY = 0 }) => {
+const Show = ({ children, initialX = 0, initialY = 100 }) => {
     const [isVisible, setIsVisible] = useState(false);
     const productRef = useRef(null);
 
@@ -33,7 +33,7 @@ const Show = ({ children, initialX = -100, initialY = 0 }) => {
 
     const visibleStyle = {
         opacity: 1,
-        transition: 'all 1s',
+        transition: 'all 1.5s',
         transform: 'translate(0%, 0%)',
     };
 

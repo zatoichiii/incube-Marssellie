@@ -1,58 +1,56 @@
-.body{
-    background-color: #151b28;
-
+.body {
+    background-color: #1b1b1b;
 }
 
-.bodyWrapper{
-    width: 100%;
-    display: flex;
-    @media screen and (max-width: 1220px) {
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-}
-.wrapper{
-    font-family: 'Montserrat', sans-serif;
+.wrapper {
+    font-family: "Plus Jakarta Sans", sans-serif;
     padding: 40px 0 20px 0;
     color: #FFFFFF;
     position: relative;
     width: 100%;
-    max-width: 600px;
-    height: 500px;
-    overflow: hidden;
     display: flex;
+    align-items: center; // Центрируем содержимое по вертикали
+    justify-content: space-between; // Размещаем текст и изображение по краям
     @media screen and (max-width: 1220px) {
-        height: auto;
+        flex-direction: column; // Меняем направление на колонку на меньших экранах
+        align-items: center; // Центрируем элементы
     }
 }
 
-.blue{
-    color: #fc8252;
-}
-
-.text{
-    font-size: 23px;
-    width: 100%;
+.textContainer {
+    width: 50%; // Задаем ширину контейнера с текстом
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    float: left;
+    align-items: flex-start; // Выравниваем текст по левому краю
+    @media screen and (max-width: 1220px) {
+        width: 100%; // На меньших экранах текст занимает всю ширину
+        align-items: center; // Центрируем текст
+        text-align: center; // Центрируем текст
+    }
 }
 
-.title{
+.image {
+    width: 45%; // Задаем ширину изображения
+    height: auto; // Автоматическая высота для сохранения пропорций
+    margin-left: 20px; // Отступ слева от текста
+    @media screen and (max-width: 1220px) {
+        width: 80%; // На меньших экранах изображение занимает 80% ширины
+        margin-left: 0; // Убираем отступ
+        margin-top: 20px; // Добавляем отступ сверху
+    }
+}
+
+.title {
     font-size: 40px;
     font-weight: 700;
-    text-align: center;
-    gap: 5px;
     margin-bottom: 20px;
-
 }
 
-.first{
-    width: 45%;
-    padding: 20px;
-    max-height: 500px;
-    align-items: center;
+.subtitle{
+    font-size: 32px;
+    font-weight: 700;
+}
+.text {
+    font-size: 23px;
+    margin-bottom: 10px; // Добавляем отступ между текстами
 }

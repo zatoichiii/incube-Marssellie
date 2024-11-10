@@ -6,7 +6,6 @@ import Container from "../../UI/Container";
 const Footer = () => {
     const footerItems = [
         { value: "ABOUT US", href: "about" },
-        { value: "MISSION", href: "mission" },
         { value: "ABILITY", href: "ability" },
         { value: "CITY", href: "city" },
         { value: "CATEGORIES", href: "categories" },
@@ -20,7 +19,7 @@ const Footer = () => {
                     <div className={styles.text}>
                         <div className={styles.rows}>
                             <div className={styles.logo}>
-                                <img src="/images/logo.jpg" alt="Logo" />
+                                <img src="/" alt="Logo" />
                             </div>
                             <div className={styles.row}>
                                 {footerItems.slice(0, 3).map(item => (
@@ -51,16 +50,14 @@ const Footer = () => {
                                 ))}
                             </div>
                             <div className={styles.row}>
-                                <div className={styles.button}>
-                                    <a href="https://filmfreeway.com/hongkonglightsfestival">
-                                        <img src="/images/FFButtons/red1.png" alt="Submit Now" />
-                                    </a>
-                                </div>
+                            <a href={'https://filmfreeway.com/marseillefestivalIncube'} className={styles.button}>
+                            <p className={styles.textSubmit}>Submit Your Work</p>
+                        </a>
                             </div>
                         </div>
                         <div className={styles.line}></div>
                         <div className={styles.copyright}>
-                            Copyright © 2025 Hong Kong Lights - International Film Festival
+                            Copyright © Incube de Marseille Film Festival
                         </div>
                     </div>
                 </div>

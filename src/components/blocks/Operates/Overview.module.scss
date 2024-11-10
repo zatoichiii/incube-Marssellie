@@ -1,10 +1,11 @@
-.wrapper{
-  background-color: #151b28;
+.wrapper {
+  background-color: #1b1b1b;
   padding: 60px 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: white;
 }
 
-.container{
+.container {
   border-radius: 16px;
   padding: 25px 0;
   width: 100%;
@@ -13,49 +14,49 @@
   }
 }
 
-.button{
+.button {
   display: block;
   margin: auto;
   width: 250px;
   height: 80px;
   transition: all 0.5s ease-out;
 
-  img{
+  img {
     width: 100%;
     height: 100%;
     border-radius: 16px;
   }
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
 }
 
-.title{
+.title {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 40px;
   color: #FFFFFF;
-  b{
-    color: #fc8252;
+  b {
+    color: white;
   }
   @media screen and (max-width: 768px) {
-    text-align: center
+    text-align: center;
   }
 }
 
-.items{
+.items {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   @media screen and (max-width: 768px) {
-   display: block;
+    display: block;
   }
 }
 
-.item{
+.item {
   width: 100%;
   padding: 0 0 40px 0;
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-bottom: 100px;
   }
 
@@ -66,8 +67,8 @@
   }
 }
 
-.itemTitle{
-  color: #fc8252;
+.itemTitle {
+  color: white;
   text-align: center;
   font-size: 30px;
   font-style: normal;
@@ -76,10 +77,32 @@
   padding-bottom: 20px;
 }
 
-.itemText{
+.itemText {
   color: #FFF;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+.venueInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.location,
+.description {
+  font-size: 22px;
+  margin: 10px 0; // Отступы между блоками
+}
+
+.imageContainer {
+  width: 100%; // Убедитесь, что контейнер занимает 100% ширины
+  margin-top: 20px; // Отступ сверху для изображения
+}
+
+.cinemaImage {
+  width: 80%; // Ширина изображения
+  height: auto; // Автоматическая высота для сохранения пропорций
+  border-radius: 0; // Убираем скругление углов, если не нужно
 }

@@ -1,38 +1,42 @@
-.wrapper{
-    background-color: #151b28;
-
-    font-family: 'Montserrat', sans-serif;
+.wrapper {
+    font-family: "Plus Jakarta Sans", sans-serif;
     background-size: cover;
     display: flex;
-    padding: 60px 0;
+    background-color: #1b1b1b; 
+    padding: 60px 0; 
 }
 
-.inner{
-    margin: auto;
-    justify-content: space-between;
+.inner {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 5px; 
+    text-align: center; 
+}
+
+.title {
+    width: 100%; 
+    color: white; 
+    font-size: 32px; 
+    margin-bottom: 20px; 
+}
+
+.awardBlock {
+    background-color: white; 
+    color: black; 
+    height: auto;
+    font-size: 20px;
+    display: flex;
     text-align: center;
-    font-size: 23px;
-    color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    padding: 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    transition: background-color 0.3s; 
 }
 
-.title{
-    text-transform: capitalize;
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    padding: 20px;
+.awardBlock:hover {
+    background-color: #313131; 
+    color: white;
 }
-
-.red{
-    color: #fc8252;
-}
-
-.nom{
-    margin-bottom: 20px;
-}
-.winners{
-    color: rgb(163, 153, 153);
-    padding: 20px;
-}
-
-

@@ -1,87 +1,75 @@
-.wrapper{
-  background-color: #151b28;
-  padding: 60px 0;
-  font-family: 'Montserrat', sans-serif;
+.wrapper {
+  background-color: #1b1b1b;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-.container{
-  border-radius: 16px;
-  display: flex;
-  padding: 25px 0px;
-  justify-content: space-between;
-  width: 100%;
-  @media screen and (max-width: 920px) {
-    flex-direction: column;
+.introText {
+  color: white; // Цвет текста
+  font-size: 24px; // Размер шрифта
+  text-align: center; // Выравнивание по центру
+  margin-bottom: 40px; // Отступ снизу
+}
+
+.description {
+  font-size: 23px;
+  color: white;
+  margin: 0 0 40px 0;
+  b {
+    color: white;
   }
 }
 
-.text{
+.tiles {
   display: flex;
-  width: 40%;
-  flex-direction: column;
-  @media screen and (max-width: 920px) {
-    width: 100%;
-  }
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  gap: 20px; 
 }
 
-.title{
+.tile {
+  background-color: #313131; 
+  border: white solid 1px;
+  padding: 20px; 
+  flex: 1; 
+  transition: 0.5s; 
+}
 
-  font-size: 40px;
+.title {
+  height: 80px;
+  font-size: 24px; 
+  text-align: center;
   font-weight: 700;
   color: #FFF;
-  margin: 0 auto 40px auto;
-  padding: 0 0 10px 0;
   width: fit-content;
-  b{
-    color: #fc8252;
+  b {
+    color: white;
   }
   @media screen and (max-width: 920px) {
     margin: 40px auto 20px auto;
   }
 }
 
-.description{
-  font-size: 23px;
-  color: white;
-  margin: 0 0 40px 0;
-  b{
-    color: #fc8252;
-  }
+.tile:hover {
+  background-color: white;
+  border: black solid 1px;
 }
 
-.button{
-  width: 200px;
-  height: 60px;
-  transition: all 0.5s ease-out;
-  margin: auto 0 0 0;
-  img{
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-  }
-  &:hover{
-    width: 210px;
-    height: 62px;
-  }
-  @media screen and (max-width: 920px) {
-    margin: 0 0 40px 0;
-  }
+.tile:hover .description {
+  color: black;
 }
 
-.slider{
-  width: 45%;
-  max-height: 500px;
-  border-radius: 16px;
-  //box-shadow: white;
-  @media screen and (max-width: 920px) {
-    width: fit-content;
-    margin: 0 auto;
-  }
+.tile:hover .title {
+  color: black;
 }
 
-.sliderImage{
-  height: 450px;
-  object-fit: cover;
-  width: 100%;
-  border-radius: 16px;
+.description {
+  font-size: 16px; 
+  color: #ffffff; 
+}
+
+.outroText{
+  color: white; // Цвет текста
+  font-size: 24px; // Размер шрифта
+  text-align: center; // Выравнивание по центру
+  margin-top: 40px; // Отступ снизу
 }

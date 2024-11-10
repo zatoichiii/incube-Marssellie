@@ -2,10 +2,8 @@ import styles from "./Gallery.module.scss"
 import Container from "../../UI/Container";
 import Show from "../../UI/Show";
 import React from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/pagination';

@@ -1,5 +1,5 @@
 .body{
-    background-color: #151b28;
+    background-color: #1b1b1b;
     padding:50px;
 
 }
@@ -14,7 +14,7 @@
     }
 }
 .wrapper{
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     padding: 40px 0 20px 0;
     color: #FFFFFF;
     position: relative;
@@ -30,7 +30,7 @@
 
 
 b{
-    color: #fc8252;
+    color: white;
 }
 
 .text{
@@ -118,3 +118,13 @@ b{
         height: auto;
     }
   }
+  .swiperContainer {
+    position: relative; /* Чтобы дочерние элементы могли позиционироваться относительно этого контейнера */
+}
+
+.pagination {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 10px; /* Отступ сверху */
+    right: 10px; /* Отступ справа */
+    z-index: 10; /* Убедитесь, что кнопки находятся поверх других элементов */
+}

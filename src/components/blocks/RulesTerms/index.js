@@ -1,98 +1,79 @@
-import React, {useState} from 'react';
-import styles from "./RulesTerms.module.scss"
-import { Button, Modal } from 'antd';
+import React, { useState, useRef } from 'react';
+import styles from "./RulesTerms.module.scss";
+import { Button } from 'antd';
 import Container from "../../UI/Container";
 import Show from '../../UI/Show';
 
 const RulesTerms = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [openIndex, setOpenIndex] = useState(null);
+    const contentRefs = useRef([]);
+
+    const questionsAndAnswers = [
+        {
+            question: "What is the evaluation process?",
+            answer: "Submissions will be assessed based on screenplay quality (story, dialogue, character development, etc.), acting, production value, originality, technical proficiency, cinematography, sound design, editing, locations, and set design. Extra points will be awarded to low-budget independent productions with small crews."
+        },
+        {
+            question: "How will selected shorts be screened?",
+            answer: "Selection and award results will be posted on our website. Incube de Marseille offers awards to over 40 films per season, but can only screen a selection during the festival."
+        },
+        {
+            question: "What is the exhibition format?",
+            answer: "If your short is selected for screening, we will contact you for an exhibition file."
+        },
+        {
+            question: "Are there any fee waivers?",
+            answer: "We strive to keep entry fees low and cannot provide fee waivers."
+        },
+        {
+            question: "How will communications be handled?",
+            answer: "All notifications will be sent through FilmFreeway. Ensure your email address is up-to-date."
+        },
+        {
+            question: "What are the original work requirements?",
+            answer: "All submissions must be original works with rights fully secured by the filmmakers. The festival is not liable for any copyright issues."
+        },
+        {
+            question: "What are the submission language requirements?",
+            answer: "All films must be in English or French or have English subtitles. Submissions in other languages without English subtitles will not be screened."
+        },
+        {
+            question: "What are the eligibility requirements?",
+            answer: "Films must have been produced no earlier than 2022. Premiere status is not required. Accepted films must provide a digital screening file (.mov, .mp4) if requested. Entry fees are non-refundable, per festival policy."
+        },
+        {
+            question: "What submission categories are accepted?",
+            answer: "We accept submissions for Short films (up to 40 minutes), Feature films (up to 125 minutes), and Screenplays. Each submission requires a separate entry fee, which is non-refundable."
+        },
+    ];
+
+    const toggleAccordion = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
+
     return (
         <div className={styles.wrapper} id={"rules"}>
             <Container>
-            <Show initialX={100}>
-            
-            <div className={styles.inner}>
-                <div className={styles.title}>
-                <span className={styles.red}>Rules</span> And <span className={styles.red}>Terms</span>
-                </div>
-                <div className={styles.description}>
-                    All entries submitted to “Level Up” - Sydney Student International Film Festival must adhere to the following guidelines. By submitting a film for consideration, the entrant / submitter / moviemaker / controlling company agrees to abide by these rules and terms.
-                </div>
-            
-            <div className={styles.buttonBlock}>
-                    <Button className={styles.button} type="primary" onClick={()=>setIsModalOpen(!isModalOpen)}>
-                        Show Rules
-                    </Button>
-                </div>
-                <Modal
-                    onCancel={()=>setIsModalOpen(!isModalOpen)}
-                    footer={[
-                        <Button className={styles.okButton} key="ok" onClick={()=>setIsModalOpen(!isModalOpen)}>
-                            Ok
-                        </Button>,
-                    ]}
-                    title="More"
-                    open={isModalOpen}
-                >
-                    <p>1.1. All films must be submitted through the FilmFreeway platform.
-                    </p>
-                    <p>1.2. All submitted films must include English subtitles if the original language is not English.
-                    </p>
-                    <p>2.1. Short films must be no longer than 40 minutes, including credits.
-                    </p>
-                    <p>2.2. Feature films must be at least 60 minutes long, including credits.
-                    </p>
-                    <p>2.3. Student films must be submitted with proof of student status (student ID or a letter from the educational institution).
-                    </p>
-                    <p>3.1. Applicants must hold all rights to the film, including music and other copyrighted materials.
-                    </p>
-                    <p>3.2. By submitting a film, you grant the festival the right to screen it once during the festival program.
-                    </p>
-                    <p>3.3. The festival reserves the right to use excerpts from the films (not exceeding 2 minutes) for promotional purposes.
-                    </p>
-                    <p>4.1. All films will be reviewed by the festival selection committee.
-                    </p>
-                    <p>4.2. Films selected for participation will be announced no later than the notification date indicated on the FilmFreeway page.
-                    </p>
-                    <p>4.3. Applicants will be notified of the selection results via email.
-                    </p>
-                    <p>5.1. Categories and awards include:
-
-Best Feature Film
-Best Short Film
-Best Documentary
-Best Director
-Best Cinematography
-Best Screenplay
-Best Animation
-
-                    </p>
-                    <p>5.2. Winners will be announced at the notification date via email.
-
-                    </p>
-                    <p>6.1. Festival participants must comply with all laws and regulations in Hong Kong.
-
-                    </p>
-                    <p> 6.2. Any inappropriate behavior may result in disqualification and removal from the event.
-
-                    </p>
-                    <p>7.1. Submission fees are final and non-refundable.
-
-
-                    </p>
-                    <p>8.1. For any questions or inquiries, please contact us at:
-
-Email: hongkonglightsfestival@gmail.com
-Or visit website: hongkonglightsfestival.com
-
-                    </p>
-                    <p>9.1. The festival reserves the right to make changes to the rules and program without prior notice.
-
-                    </p>
-                    <p>9.2. All decisions made by the selection committee and jury are final and not subject to appeal.
-                    </p>
-                </Modal>
-                </div>
+                <Show>
+                    <h2 className={styles.title}>Rules and Submission Guidelines</h2>
+                    {questionsAndAnswers.map((item, index) => (
+                        <div key={index} className={styles.accordion}>
+                            <div className={styles.header} onClick={() => toggleAccordion(index)}>
+                                <div className={styles.quastion}>{item.question}</div>
+                                <span className={`${styles.icon} ${openIndex === index ? styles.open : ''}`}>
+                                    {openIndex === index ? '-' : '+'}
+                                </span>
+                            </div>
+                            <div 
+                                ref={el => contentRefs.current[index] = el}
+                                className={`${styles.answer} ${openIndex === index ? styles.open : ''}`}
+                                style={{ height: openIndex === index ? `${contentRefs.current[index].scrollHeight}px` : '0' }} 
+                            >
+                                {item.answer}
+                            </div>
+                            <div className={styles.divider}></div> 
+                        </div>
+                    ))}
                 </Show>
             </Container>
         </div>
