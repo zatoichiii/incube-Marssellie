@@ -13,7 +13,15 @@ const Aiming = () => {
 
     return (
         <div className={styles.wrapper}>
-            <video ref={videoRef} autoPlay muted loop className={styles.backgroundVideo}>
+            <video 
+                ref={videoRef} 
+                autoPlay 
+                muted 
+                loop 
+                className={styles.backgroundVideo}
+                playsInline 
+                webkit-playsinline
+            >
                 <source src="/images/banner/bg2.mp4" type="video/mp4" />
                 Ваш браузер не поддерживает видео.
             </video>

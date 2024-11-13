@@ -14,26 +14,33 @@ const Banner = () => {
 
     return (
         <div className={styles.wrapper}>
-            <video ref={videoRef} autoPlay muted loop className={styles.backgroundVideo}>
-            <source src="/images/banner/bgvideo.mp4" type="video/mp4" />
-
+            <video 
+                ref={videoRef} 
+                autoPlay 
+                muted 
+                loop 
+                className={styles.backgroundVideo}
+                playsInline 
+                webkit-playsinline
+            >
+                <source src="/images/banner/bgvideo.mp4" type="video/mp4" />
                 Ваш браузер не поддерживает видео.
             </video>
             <Container>
                 <div className={styles.inner}>
-                <Show>
-                    <div className={styles.info}>
-                        <div className={styles.title}>
-                            <b> Incube de Marseille Film Festival</b>
+                    <Show>
+                        <div className={styles.info}>
+                            <div className={styles.title}>
+                                <b> Incube de Marseille Film Festival</b>
+                            </div>
+                            <div className={styles.subTitle}>
+                                A festival that champions both emerging and experienced independent filmmakers. Incube serves as a true "incubator" for fresh ideas and unique stories, providing a space for voices free from Hollywood conventions to thrive.
+                            </div>
+                            <a href={'https://filmfreeway.com/marseillefestivalIncube'} className={styles.button}>
+                                <p className={styles.textSubmit}>Submit Your Work</p>
+                            </a>
                         </div>
-                        <div className={styles.subTitle}>
-                            A festival that champions both emerging and experienced independent filmmakers. Incube serves as a true "incubator" for fresh ideas and unique stories, providing a space for voices free from Hollywood conventions to thrive.
-                        </div>
-                        <a href={'https://filmfreeway.com/marseillefestivalIncube'} className={styles.button}>
-                            <p className={styles.textSubmit}>Submit Your Work</p>
-                        </a>
-                    </div>
-                </Show>
+                    </Show>
                 </div>
             </Container>
         </div>
@@ -41,4 +48,3 @@ const Banner = () => {
 };
 
 export default Banner;
-

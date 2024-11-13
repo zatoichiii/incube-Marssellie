@@ -2,10 +2,10 @@ import React, { useState, useRef } from 'react';
 import styles from "./RulesTerms.module.scss";
 import { Button } from 'antd';
 import Container from "../../UI/Container";
-import Show from '../../UI/Show';
 
 const RulesTerms = () => {
     const [openIndex, setOpenIndex] = useState(null);
+    const [showAll, setShowAll] = useState(false); // State to control showing all questions
     const contentRefs = useRef([]);
 
     const questionsAndAnswers = [
@@ -51,15 +51,19 @@ const RulesTerms = () => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
+    const handleShowAll = () => {
+        setShowAll(!showAll);
+    };
+
     return (
         <div className={styles.wrapper} id={"rules"}>
             <Container>
-                <Show>
+                <div>
                     <h2 className={styles.title}>Rules and Submission Guidelines</h2>
-                    {questionsAndAnswers.map((item, index) => (
+                    {questionsAndAnswers.slice(0, showAll ? questionsAndAnswers.length : 4).map((item, index) => (
                         <div key={index} className={styles.accordion}>
                             <div className={styles.header} onClick={() => toggleAccordion(index)}>
-                                <div className={styles.quastion}>{item.question}</div>
+                                <div className={styles.question}>{item.question}</div>
                                 <span className={`${styles.icon} ${openIndex === index ? styles.open : ''}`}>
                                     {openIndex === index ? '-' : '+'}
                                 </span>
@@ -74,7 +78,10 @@ const RulesTerms = () => {
                             <div className={styles.divider}></div> 
                         </div>
                     ))}
-                </Show>
+                    <Button onClick={handleShowAll} className={styles.showAllButton}>
+                        {showAll ? 'Hide' : 'Show All'}
+                    </Button>
+                </div>
             </Container>
         </div>
     );

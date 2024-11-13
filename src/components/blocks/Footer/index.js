@@ -19,7 +19,7 @@ const Footer = () => {
                     <div className={styles.text}>
                         <div className={styles.rows}>
                             <div className={styles.logo}>
-                                <img src="/" alt="Logo" />
+                            <img src={"/images/ico.png"} alt="Incube"/>
                             </div>
                             <div className={styles.row}>
                                 {footerItems.slice(0, 3).map(item => (

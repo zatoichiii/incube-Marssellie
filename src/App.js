@@ -8,7 +8,6 @@ import Header from "./components/blocks/Header";
 import Banner from "./components/blocks/Banner";
 import Overview from "./components/blocks/Overview";
 import Operates from "./components/blocks/Operates";
-import CoreValues from "./components/blocks/CoreValues";
 import Gallery from "./components/blocks/Gallery";
 import Loader from './components/UI/Loader';
 

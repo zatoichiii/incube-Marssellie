@@ -22,7 +22,7 @@ const Overview = () => {
     return (
         <div className={styles.wrapper} id={"mission"}>
             <Container>
-                <Show>
+                <div>
                     <h2 className={styles.introText}>
                         Our festival unfolds in three distinct stages, each showcasing unique aspects of cinema:
                     </h2>
@@ -37,7 +37,7 @@ const Overview = () => {
                     <h2 className={styles.outroText}>
                     At Incube de Marseille, each stage of the festival highlights unique cinematic perspectives, but only the best from each season are invited to the grand annual screening. Our year-end event brings together the finest works, where the top winners from each stage are showcased in a prestigious, large-scale screening
                     </h2>
-                </Show>
+                </div>
             </Container>
         </div>
     );

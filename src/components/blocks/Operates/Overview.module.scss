@@ -8,7 +8,8 @@
 .container {
   border-radius: 16px;
   padding: 25px 0;
-  width: 100%;
+  margin: auto;
+  width: 80%;
   @media screen and (max-width: 920px) {
     flex-direction: column;
   }
@@ -86,16 +87,25 @@
 }
 
 .venueInfo {
+  width: 80%;
   display: flex;
   flex-direction: column;
 }
 
-.location,
-.description {
-  font-size: 22px;
+.location {
+  font-size: 90px;
   margin: 10px 0; // Отступы между блоками
+  @media screen and (max-width: 1050px) {
+    font-size: 70px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+  }
 }
 
+.description{
+  font-size: 23px;
+}
 .imageContainer {
   width: 100%; // Убедитесь, что контейнер занимает 100% ширины
   margin-top: 20px; // Отступ сверху для изображения

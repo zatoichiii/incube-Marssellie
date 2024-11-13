@@ -26,10 +26,10 @@ const Header = () => {
 
     const menuItems = [
         { value: "About Us", href: "about" },
-        { value: "Mission", href: "mission" },
-        { value: "City", href: "city" },
-        { value: "Categories", href: "categories" },
+        { value: "Stages", href: "mission" },
+        { value: "Main Awards", href: "categories" },
         { value: "Rules", href: "rules" },
+        { value: "City", href: "city" },
         { value: "Submit", href: "https://filmfreeway.com/marseillefestivalIncube", external: true }
     ];
 
@@ -38,8 +38,7 @@ const Header = () => {
             <Container>
                 <div className={styles.inner}>
                     <a href={"/"} className={styles.logo}>
-                        {/* <img src={"/images/.jpg"} alt="Incube"/> */}
-                        Incube
+                        <img src={"/images/ico.png"} alt="Incube"/>
                     </a>
                     <div className={styles.headerItems}>
                         {menuItems.map((item, index) => (

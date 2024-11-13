@@ -24,7 +24,6 @@ const Aiming = () => {
 
     return (
         <div className={styles.wrapper} id={"categories"}>
-            <Container>
                 <div className={styles.inner}>
                     <h2 className={styles.title}>Main Awards</h2>
                     {awards.map((award, index) => (
@@ -37,7 +36,6 @@ const Aiming = () => {
                         </div>
                     ))}
                 </div>
-            </Container>
         </div>
     );
 };
